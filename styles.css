@@ -1,0 +1,201 @@
+/* Modelled after Ward 5 NPA website & linktree */
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
+:root {
+  --accent: #a487bd;
+  --text: #222;
+  --bg: #f9f9fa;
+  --heading: #141c2f;
+  --border: #e0e3ea;
+  --radius: 16px;
+  --max-width: 450px;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: "Lato", serif;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  min-height: 100vh;
+}
+
+.page {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2em;
+  background: #fff;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+h1 {
+  font-size: 1.3rem;
+  margin: 0 0 10px 0;
+  color: var(--heading);
+  font-weight: 700;
+  letter-spacing: -1px;
+  text-align: center;
+}
+
+.subtitle {
+  color: var(--accent);
+  font-size: 1.1rem;
+  margin: 0 0 8px 0;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 1rem;
+  color: var(--heading);
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.about, .agenda {
+  margin-bottom: 32px;
+}
+
+.details {
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 1rem;
+}
+
+img {
+  max-width: 50%;
+}
+
+ol {
+  padding-left: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+li {
+  margin-block: 8px;
+}
+
+footer {
+  margin-top: 32px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+a:not(.btn) {
+  color: var(--accent);
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent);
+  transition: border-bottom 0.2s;
+}
+
+a:not(.btn):hover, a:not(.btn):focus {
+  border-bottom: 2px solid var(--accent);
+}
+
+.btn, button {
+  background-color: white;
+  border: 1px solid #1F1E1C;
+  border-radius: 10px;
+  color: #1F1E1C;
+  padding: 15px 32px;
+  text-align: center;
+  font-weight: 700;
+  display: inline-block;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 1em;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.btn:hover, button:hover {
+  background-color: #1F1E1C;
+  color: white;
+}
+
+.embeddable-buttondown-form {
+  background-color: #f3f4f6;
+  padding: 24px;
+  text-align: left;
+  margin-bottom: 32px;
+  color: var(--text);
+  border-radius: 12px;
+}
+
+.embeddable-buttondown-form label {
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 12px;
+}
+
+.embeddable-buttondown-form input[type="email"] {
+  display: block;
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  background-color: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+  color: var(--text);
+  box-sizing: border-box;
+}
+
+.embeddable-buttondown-form input[type="email"]::placeholder {
+  color: #9ca3af;
+}
+
+.embeddable-buttondown-form input[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.embeddable-buttondown-form input[type="submit"]:hover,
+.embeddable-buttondown-form input[type="submit"]:focus {
+  background-color: #262626;
+}
+
+@media screen and (min-width: 600px) {
+  .page {
+    margin-block: 3rem;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 12px 0 rgba(20, 28, 47, 0.07);
+    border: 1px solid var(--border);
+  }
+}
